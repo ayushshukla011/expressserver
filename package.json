@@ -4,8 +4,9 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "netlify-lambda  serve functions",
+    "build": "netlify-lambda  build functions",
+    "deploy":"netlify deploy --prod"
   },
   "author": "",
   "license": "ISC",
@@ -14,9 +15,11 @@
     "body-parser": "^1.20.2",
     "cors": "^2.8.5",
     "express": "^4.18.2",
-    "express-pino-logger": "^7.0.0"
+    "express-pino-logger": "^7.0.0",
+    "serverless-http": "^3.2.0"
   },
   "devDependencies": {
+    "netlify-lambda": "^2.0.16",
     "twilio": "^4.21.0"
   }
 }
